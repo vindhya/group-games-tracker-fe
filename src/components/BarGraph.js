@@ -30,7 +30,7 @@ const BarGraph = ({ data, title }) => {
             }}
           />
           <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-          <Bar dataKey="wins" fill="#e91e63" />
+          <Bar dataKey="count" fill="#e91e63" />
         </BarChart>
       </ResponsiveContainer>
     </>
