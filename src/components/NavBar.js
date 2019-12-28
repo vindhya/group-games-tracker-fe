@@ -5,8 +5,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import VideogameAssetIcon from '@material-ui/icons/VideogameAsset';
 
 const useStyles = makeStyles(theme => ({
+  logo: { marginRight: theme.spacing(2) },
   title: { flexGrow: 1 },
   headerItem: { marginLeft: theme.spacing(2) }
 }));
@@ -32,6 +34,7 @@ const NavBar = () => {
     <div>
       <AppBar position="static">
         <Toolbar>
+          <VideogameAssetIcon className={classes.logo} fontSize="large" />
           <Typography
             className={classes.title}
             variant="h6"
