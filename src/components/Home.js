@@ -1,5 +1,6 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
+import React, { useEffect } from 'react';
+
+import BarGraph from './BarGraph';
 
 const data = [
   { name: 'kaveri', wins: 5 },
@@ -12,7 +13,11 @@ const data = [
 ];
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <>
+      <BarGraph title="Total Wins for All Games" data={data} />
+    </>
+  );
 };
 
 export default Home;
