@@ -30,3 +30,19 @@ export const fetchWinsThunk = () => dispatch => {
     .then(data => dispatch(setWinData(data.data)))
     .catch(err => dispatch(setError()));
 };
+
+export const fetchAvalonStatsThunk = () => dispatch => {
+  dispatch(setLoading());
+  return fetch('/games/avalon')
+    .then(res => res.json())
+    .then(data => dispatch(setAvalonData(data.data)))
+    .catch(err => dispatch(setError()));
+};
+
+export const fetchCoupStatsThunk = () => dispatch => {
+  dispatch(setLoading());
+  return fetch('/games/coup')
+    .then(res => res.json())
+    .then(data => dispatch(setCoupData(data.data)))
+    .catch(err => dispatch(setError()));
+};
